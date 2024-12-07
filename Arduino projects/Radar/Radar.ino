@@ -30,7 +30,7 @@ const long intervalIdle = 1250;
 
 Servo myServo;
 
-int warnings = 0;
+bool warnings = true;
 
 
 void setup() {
@@ -51,10 +51,10 @@ void loop() {
   if (digitalRead(switchpin) == HIGH){
     digitalWrite(ledStatus, LOW);
 
-    warnings = 0; // Warn again if power is off
+    warnings = true; // Warn if power is off
 
     // Play starting sound
-    
+
     tone(buzzpin, 440, 250);
     delay(250);
     tone(buzzpin, 784, 250);
@@ -66,7 +66,7 @@ void loop() {
   if (digitalRead(switchpin) == LOW){
     digitalWrite(ledStatus, HIGH);
 
-    if(warnings == 0){
+    if(warnings){
       // Play closing sound
       tone(buzzpin, 440, 250);
       delay(250);
@@ -74,7 +74,7 @@ void loop() {
       delay(250);
       tone(buzzpin, 587, 250);
 
-      warnings++;
+      warnings = false;
     }
   }
 }
