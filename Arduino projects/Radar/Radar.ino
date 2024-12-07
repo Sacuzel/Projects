@@ -54,6 +54,7 @@ void loop() {
     warnings = 0; // Warn again if power is off
 
     // Play starting sound
+    
     tone(buzzpin, 440, 250);
     delay(250);
     tone(buzzpin, 784, 250);
