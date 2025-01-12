@@ -42,6 +42,8 @@ Usage
     Power the Arduino to activate the system.
     Monitor LED colors and buzzer alerts for water level changes.
 
-License
+A video demonstration of the setup can be seen here:
+https://files.catbox.moe/kncyks.mp4
 
-This project is open-source and can be modified or redistributed. Credit to the author, Abdurrahman Faig, is appreciated.
+License
+This project is open-source and can be modified or redistributed. Credit to the author (me), Abdurrahman Faig, is appreciated.
